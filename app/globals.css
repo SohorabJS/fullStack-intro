@@ -24,3 +24,38 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Futuristic visuals */
+:root {
+  --accent-1: #6ee7b7;
+  --accent-2: #7c3aed;
+  --muted: rgba(255,255,255,0.7);
+}
+
+.bg-hero {
+  background-image: radial-gradient(ellipse at 10% 10%, rgba(124,58,237,0.15), transparent 10%),
+    radial-gradient(ellipse at 90% 80%, rgba(110,231,183,0.08), transparent 12%),
+    linear-gradient(180deg, #030617 0%, #081026 100%);
+}
+
+.nav-link {
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background .18s ease, transform .18s ease;
+}
+.nav-link:hover { background: rgba(255,255,255,0.03); transform: translateY(-2px); }
+
+.btn-primary {
+  background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
+  color: #021018; padding: 10px 16px; border-radius: 12px; font-weight:600;
+}
+.btn-ghost { border: 1px solid rgba(255,255,255,0.08); padding: 10px 16px; border-radius:12px }
+
+.backdrop-blur-sm { backdrop-filter: blur(6px); }
+
+.card {
+  display:block; padding:18px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,4,23,0.6); }
